@@ -1,0 +1,56 @@
+
+/*
+                                        EXERCÍCIO 2 - IF
+                    Faça um programa que receba a idade e o peso de uma pessoa. 
+                    De acordo com a tabela a seguir, verifique e mostre em qual 
+                    grupo de risco essa pessoa se encaixa.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int idade, risco; 
+		double peso;
+		
+		System.out.print("Digite a idade: ");
+		idade = input.nextInt();
+		
+		System.out.print("Digite o peso: ");
+		peso = input.nextDouble();
+
+		if (idade < 20) {
+			if (peso < 60) {
+				risco = 9; }
+			else if (peso < 90) {
+				risco = 8; }
+			else {
+				risco = 7; }
+		}
+		
+		if (idade < 50) {
+			if (peso < 60) {
+				risco = 6; }
+			else if (peso < 90) {
+				risco = 5; }
+			else {
+				risco = 4; }
+		}
+		
+		else {
+			if (peso < 60) {
+				risco = 3; }
+			else if (peso < 90) {
+				risco = 2; }
+			else {
+				risco = 1; }
+		}
+		
+		System.out.printf("O risco para a idade de %d anos e peso de %.1f kg é classificado como %d.\n", idade, peso, risco);
+		System.out.print("**FIM DO PROGRAMA** ");
+		
+		input.close();
+    }
+}

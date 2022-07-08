@@ -1,0 +1,100 @@
+
+/*
+                                EXERCÍCIO 04 - LAÇOS DE REPETIÇÃO FOR
+
+Faça um programa que receba o preço, a categoria (1 – limpeza; 2 – alimentação; ou 3 – vestuário) 
+e a situação (R – produtos que necessitam de refrigeração; e N – produtos que não necessitam de 
+refrigeração). Calcule e mostre:
+O valor do aumento, usando as regras que se seguem.
+O valor do imposto, usando as regras a seguir.
+ O produto que preencher pelo menos um dos seguintes 
+ requisitos pagará imposto equivalente a 5% do preço; caso 
+ contrário, pagará 8%. Os requisitos são:
+Categoria: 2 Situação: R
+O novo preço, ou seja, o preço mais aumento menos imposto.
+A classificação, usando as regras a seguir.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        	Scanner input = new Scanner(System.in);
+		
+		short Categoria;
+		double Preco, PrecoAumento = 0, Imposto, NovoPreco;
+		char Situacao;
+		
+		System.out.print("Digite o número da categoria (1 - para limpeza) ( 2 - para alimentação) (3 - para vestuário): ");
+		Categoria = input.nextShort();
+		System.out.print("Digite o preço: ");
+		Preco = input.nextDouble();
+		System.out.print("Digite a letra da situação (R - produtos que necessitam de refrigeração) (N - não necessitam de Refrigeração): ");
+		Situacao = input.next().charAt(0);
+		
+		if (Preco <= 25) {
+			switch(Categoria) {
+				case 1:
+					PrecoAumento = Preco * 0.05;
+				break;
+				
+				case 2:
+					PrecoAumento = Preco * 0.08;
+				break;
+				
+				case 3: 
+					PrecoAumento = Preco * 0.10;
+				break;
+			
+				default:
+					System.out.print("Número de categoria válida, escolha 1, 2 ou 3."); }
+		}
+			
+		else {
+			switch(Categoria) {
+				case 1:
+					PrecoAumento = Preco * 0.12;
+				break;
+					
+				case 2:
+					PrecoAumento = Preco * 0.15;
+				break;
+					
+				case 3: 
+					PrecoAumento = Preco * 0.18;
+				break;
+				
+				default:
+					System.out.print("Número de categoria inválido, escolha 1, 2 ou 3."); }
+			}
+		
+		if (Categoria == 1 || Categoria == 2 || Categoria == 3) {
+		
+		System.out.printf("\nValor do aumento: R$%.2f", PrecoAumento);
+		
+		if (Categoria == 2 || Situacao == 'R') {
+			Imposto = Preco * 0.05; }
+		
+		else {
+			Imposto = Preco * 0.08; }
+
+		System.out.printf("\nValor do imposto: R$%.2f", PrecoAumento);
+		
+		NovoPreco = Preco + PrecoAumento - Imposto;
+		System.out.printf("\nNovo preçoo: R$%.2f", NovoPreco);
+		
+		if (NovoPreco <= 50) {
+			System.out.print("Barato"); }
+		
+		else if (NovoPreco < 120) {
+			System.out.print("Normal"); }
+		
+		else {
+			System.out.print("Caro"); }
+		}
+		
+		input.close();
+
+    }
+}

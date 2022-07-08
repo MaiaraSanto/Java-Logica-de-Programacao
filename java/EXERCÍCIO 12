@@ -1,0 +1,43 @@
+
+/*
+                        EXERCÍCIO 09 - IF
+                        Escreva um programa para ler o ano de nascimento de uma 
+                        pessoa e escrever uma mensagem que diga se ela poderá ou 
+                        não votar este ano (não é necessário considerar o mês em que ela nasceu).
+
+*/
+
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int AnoNascimento, AnoAtual, Idade;
+        AnoAtual=2022;
+    
+        System.out.println("Digite o Ano de Nascimento :");
+        AnoNascimento =input.nextInt();
+        
+         Idade= AnoAtual - AnoNascimento;
+        
+        if (Idade >=16){
+            System.out.println("Você está apto para votar :");}
+            
+            else{
+                System.out.println("Você não estará apto para votar :");}
+                
+        
+        System.out.printf("você tem" + Idade + "anos de idade\n");
+
+                
+        System.out.println("**FIM DO PROGRAMA**");        
+                
+		input.close();
+            
+         
+    }
+
+}

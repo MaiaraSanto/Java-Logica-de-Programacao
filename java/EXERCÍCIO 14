@@ -1,0 +1,45 @@
+
+/*
+                                            EXERCÍCIO 3 - IF
+
+                        Faça um programa que receba a idade de um nadador e mostre sua categoria, 
+                        usando as regras a seguir. Para idade inferior a 5, deverá mostrar mensagem.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+       	Scanner input = new Scanner(System.in);
+
+		int Idade;
+		String Categoria;
+		
+		System.out.print("Digite a idade do Nadador: ");
+		Idade = input.nextInt();
+		
+		if (Idade < 5 ) {
+		System.out.printf("A idade do nadador é de %d anos,está fora da categoria e não poderá competir!\n", Idade);}
+		
+		else if (Idade>= 5 && Idade <=7) {
+			System.out.printf("A idade do nadador é de %d anos,  sua categoria é Infantil.\n", Idade);}
+			
+		else if (Idade>= 8 && Idade <=10) {
+		System.out.printf("A idade do nadador é de %d anos,  sua categoria é Juvenil.\n", Idade);}
+		
+		else if (Idade>= 11 && Idade <=15) {
+		System.out.printf("A idade do nadador é de %d anos,  sua categoria é Adolescente.\n", Idade);}
+			
+		else if (Idade>=16 && Idade <=30) {
+		System.out.printf("A idade do nadador é de %d anos,  sua categoria é Adulto.\n", Idade);}
+		
+		else {
+		System.out.printf("A idade do nadador é de %d anos,  sua categoria é Sênior.\n", Idade);}
+		
+		
+			System.out.print("**FIM DO PROGRAMA**");
+		
+		input.close();
+    }
+}

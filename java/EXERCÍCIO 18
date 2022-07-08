@@ -1,0 +1,46 @@
+
+/*
+EXERCÍCIO 12-IF
+
+Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) 
+e escrevê-los em ordem crescente.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        	Scanner input = new Scanner(System.in);
+        	
+        	int A,B,C;
+        	
+        System.out.println("Digite o primeiro número");
+        A = input.nextInt();
+        System.out.println("Digite o segundo número");
+        B = input.nextInt();
+        System.out.println("Digite o terceiro número");
+        C = input.nextInt();
+        
+        if (A == B && A == C && B == C) {
+            System.out.println("Entrada de valores inválido"); }
+            else if (A < B && B < C && C > A && C > B) {
+                System.out.printf("Os números em ordem Crescente são A,B,C :"+ A + B + C+"\n");}
+                else if (A < B && A < C && B > A && B > C) {
+                    System.out.printf("Os números em ordem Crescente são A,C,B :"+ A+ C+ B+"\n");}
+                    else if (A > B && A < C && B < C && C > A) {
+                        System.out.printf("Os números em ordem Crescente são B,A,C :"+ B+ A+ C+"\n");}
+                        else if (C < A && C < B && B > C && B > A){
+                            System.out.printf("Os números em ordem Crescente são C,A,B :"+ C+ A+ B+"\n");}
+                            else if (C < A && C < B && B < A && B > C){
+                                System.out.printf("Os números em ordem Crescente são C,B,A :"+ C+ B+ A+"\n");}
+                                else {
+                                    System.out.printf("Os números em ordem Crescente são B,C,A :"+ B+ C+ A+"\n");}
+                                    
+                                    System.out.println("**FIM DO PROGRAMA**");
+                                    
+                                    input.close();
+            
+            
+    }
+}

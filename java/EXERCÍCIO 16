@@ -1,0 +1,41 @@
+
+/*
+            EXERCÍCIO 08 - CONJUNTO DE VALORES (WHILE)
+            
+            Escreva um programa para ler 2 valores 
+            (considere que não serão informados valores iguais)
+            e escrever o maior deles.
+*/
+
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        		Scanner input = new Scanner(System.in);
+		
+		int N1, N2;
+		
+		System.out.print("Digite o primeiro número: ");
+		N1 = input.nextInt();
+		System.out.print("Digite o segundo número: ");
+		N2 = input.nextInt();
+		
+		if (N1 > N2) {
+			System.out.print("O maior número é: " + N1);
+		}
+		
+		else if (N2 > N1) {
+			System.out.println("O maior número é: " + N2);
+		}
+		
+		else {
+			System.out.print("Entrada de valores inválido");
+		}
+		
+		System.out.print("**Fim do Programa** ");
+		
+		input.close();
+    }
+}

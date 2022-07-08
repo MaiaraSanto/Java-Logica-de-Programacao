@@ -1,0 +1,88 @@
+
+/*
+                EXERCÍCIO 03 - LAÇOS DE REPETIÇÃO
+
+Foi feita uma estatística em cinco cidades brasileiras para coletar dados sobre acidentes de trânsito. Foram obtidos os seguintes dados:
+a) código da cidade;
+b) número de veículos de passeio;
+c) número de acidentes de trânsito com vítimas.
+Deseja-se saber:
+a) Qual é o maior e qual é o menor índice de acidentes de trânsito e a que cidades pertencem;
+b) Qual é a média de veículos nas cinco cidades juntas;
+c) Qual é a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+		
+		int Codigocidade, VeiculoPasseio, TransitoVitimas, 
+		Totalveiculos=0, 
+		Maior = 0, 
+		MaiorCodigo = 0, 
+		Menor = 0, 
+		MenorCodigo = 0, 
+		TotalAcidente=0, 
+		ContagemAcidente=0;
+		double MediaVeiculos, MediaAcidente;
+		
+	
+		
+		for (int i = 1; i <= 5; i++) {
+			System.out.print("Digite o Código da " + i + "º cidade: "); 
+			Codigocidade = input.nextInt();
+			
+			System.out.print("Digite o número de veículos da " + i + "ºcidade: ");
+			VeiculoPasseio = input.nextInt();
+			
+			System.out.print("Digite o número de acidentes com vítimas da " + i + "º cidade: ");
+			TransitoVitimas = input.nextInt();
+			
+			
+			if (i == 1) {
+				Maior = TransitoVitimas;
+				MaiorCodigo = Codigocidade;
+				Menor = TransitoVitimas;
+				MenorCodigo = Codigocidade;
+			}
+			
+			else {
+				if (TransitoVitimas > Maior) {
+					Maior = TransitoVitimas;
+					MaiorCodigo = Codigocidade; }
+				else if (TransitoVitimas < Menor) {
+					Menor = TransitoVitimas;
+					MenorCodigo = Codigocidade; }
+			}
+			
+			Totalveiculos = Totalveiculos + VeiculoPasseio;
+			if (VeiculoPasseio < 2000) {
+				TotalAcidente = TotalAcidente + TransitoVitimas;
+				ContagemAcidente = ContagemAcidente + 1; }
+			
+		} // fechando o FOR.
+			
+			System.out.println("\nMaior nnúmero de acidentes = " + Maior+ " na cidade de códigos = " + MaiorCodigo);
+			System.out.println("Menor números de acidentes = " + Menor + " na cidade de códigos = " + MenorCodigo);
+			
+			
+			MediaVeiculos = Totalveiculos/5;
+			System.out.printf("Média de acidentes nas 5 cidades = %.1f \n", MediaVeiculos);
+			
+			
+			if (ContagemAcidente == 0) {
+				System.out.println("Não foi digitada nenhuma cidade com menos de 2000 veículos."); }
+			
+			else {
+				MediaAcidente = TotalAcidente/ContagemAcidente;
+				System.out.printf("Média de acidentes nas cidades com menos de 2000 veículos = %.1f \n", MediaVeiculos); }
+		
+		input.close();
+	}
+
+
+    
+}

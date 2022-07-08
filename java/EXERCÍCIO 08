@@ -1,0 +1,48 @@
+
+/*
+            EXERCÍCIO 07 - ESTRUTURAS CONDICIONAIS E DE REPETIÇÃO (D-WHILE) triângulo
+            
+            Faça um programa para calcular a  área de um triângulo e que não permita a 
+            entrada de dados inválidos, ou seja, medidas menores ou iguais à zero.
+            Mostre também se ele é Isóceles, Equilátero ou Escaleno.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+       	Scanner input = new Scanner(System.in);
+		
+		float base, altura;
+		double Lado1, Lado2, Lado3;
+		
+		do {
+			System.out.println("Digite a base do triângulo: ");
+			base = input.nextFloat();
+			System.out.println("Digite a altura do triângulo: ");
+			altura = input.nextFloat();
+			System.out.println("Digite o primeiro lado do triângulo: ");
+			Lado1= input.nextDouble();
+			System.out.println("Digite o segundo lado do triângulo: ");
+			Lado2= input.nextDouble();
+			System.out.println("Digite o terceiro lado do triângulo: ");
+			Lado3= input.nextDouble();
+			
+			if (Lado1 == Lado2 && Lado1 == Lado3){
+			    System.out.print(" triângulo Isóceles: "); }
+			    else if (Lado1 == Lado2 || Lado1 ==3 || Lado2 == 3) {
+			        System.out.print(" triângulo Equilátero: "); }
+			        else { 
+			            System.out.print("triângulo Escaleno") ; }
+			            
+			if (base == 0 || altura == 0 ) {
+				System.out.print("\nEntrada inválida!\n");
+			}
+		} while (base <= 0 || altura <= 0);
+		
+		System.out.print("\n área do triângulo: " + (base*altura)/2 + " cm.");
+		
+		input.close();
+    }
+}

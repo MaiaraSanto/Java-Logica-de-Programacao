@@ -1,0 +1,47 @@
+
+/*
+EXERCÍCIO 13-IF
+
+Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) 
+de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes 
+Fórmulas:
+para homens: (72.7 * Altura) – 58
+para mulheres: (62.1 * Altura) – 44.7
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        	Scanner input = new Scanner(System.in);
+        	
+        		int Sexo;
+		        double Altura, Peso = 0;
+		
+		System.out.print("Digite o sexo :1 - para feminino, 2 - para masculino): ");
+		Sexo = input.nextInt();
+		System.out.print("Digite a altura: ");
+		Altura = input.nextDouble();
+		
+		if (Sexo == 1) {
+			Peso = (62.1 * Altura) - 44.7;
+			System.out.printf("O peso ideal para esta altura e sexo � de %.2f kg.\n", Peso);
+		}
+		
+		else if (Sexo == 2) {
+			Peso = (72.7 * Altura) - 58;
+			System.out.printf("O peso ideal para esta altura e sexo é de %.2f kg.\n", Peso);
+		}
+		
+		else {
+			System.out.print("Sexo inválido, por favor digite 1 ou 2.");
+		}
+		        
+		    System.out.print("**FIM DO PROGRAMA**"); 
+		         
+		         input.close();
+            
+            
+    }
+}

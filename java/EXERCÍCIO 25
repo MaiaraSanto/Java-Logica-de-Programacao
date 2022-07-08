@@ -1,0 +1,44 @@
+
+/*
+            EXERCÍCIO 07 - CONJUNTO DE VALORES (WHILE)
+            
+            Faça um programa que leia um conjunto não determinado 
+            de valores e mostre o valor lido, seu quadrado, seu cubo 
+            e sua raiz quadrada. Finalize a entrada de dados com um valor 
+            negativo ou zero.
+*/
+
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        	Scanner input = new Scanner(System.in);
+		
+		int N;
+		double Q, C, R;
+		
+		System.out.print("Digite um número : ");
+		N = input.nextInt();
+		
+		Q = Math.pow(N, 2);
+		C = Math.pow(N, 3);
+		R = Math.sqrt(N);
+		
+			while (N > 0 && N <= 10) {
+				System.out.println ("O quadrado é" + Q);
+				System.out.println ("O cubo é " + C);
+				System.out.printf ("A raíz quadrada é %.2f \n",  R);
+				N=N +1;}
+		
+			if (N == 0) {
+				System.out.println("ENTRADA DE DADOS INVÁLIDA");
+			}
+			
+			System.out.print("**FIM DO PROGRAMA**");
+			
+		input.close();
+
+    }
+}

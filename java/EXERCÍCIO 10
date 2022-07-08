@@ -1,0 +1,46 @@
+
+/*
+EXERCÍCIO 10 - ESTRUTURAS CONDICIONAIS (DO-WHILE)
+
+Faça um programa que receba várias idades, calcule e mostre a média das idades digitadas. Finalize digitando idade igual a zero
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int idade;
+        double mediaIdades;
+        int soma = 0;
+        int cont = 0;
+        
+ 
+        do {
+ 
+            System.out.println("Informe a sua idade");
+            idade = input.nextInt();
+ 
+            if (idade > 0) {
+                soma = soma + idade;
+                cont = cont + 1;
+            }
+            
+            else {
+                 System.out.println("idade é igual a 0, digite um número maior.");
+            }
+ 
+        } while (idade > 0 && idade <= 100);
+ 
+        if (cont > 0 ) {
+            mediaIdades = soma / cont;
+            System.out.println("A média das idades é de: " + mediaIdades);}
+            
+            System.out.println("**Fim do Programa**");
+            
+            input.close();
+            
+    }
+}

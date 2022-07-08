@@ -1,0 +1,34 @@
+
+/*
+                            EXERCÍCIO 01- LAÇOS DE REPETIÇÃO FOR
+
+Um funcionário de uma empresa recebe, anualmente, aumento salarial. Sabe-se que:
+a) esse funcionário foi contratado em 2000, com salário inicial de R$1.000,00;
+b) Em 2001, ele recebeu aumento de 1,5%, sobre o seu salário inicial;
+c) A partir de 2002 (inclusive), os aumentos salariais sempre corresponderam ao dobro do percentual do ano anterior.
+Faça um programa que determine o salário desse funcionário dos anos de 2000 à 2017. Apresente todos os valores.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        	Scanner input = new Scanner(System.in);
+		
+		float S = 1000; 
+		double P = 0.015;
+		double NS = S + P * S;
+
+		System.out.printf("No ano 2000, o salario era de %.1f reais.\n", S);
+		System.out.printf("No ano 2001, o salario era de %.1f reais.\n", NS);
+		
+		for (int a = 2002; a < 2018; a++) {
+		P = 2 * P;
+		NS = (NS * P) + NS;
+		System.out.printf("No ano %d, o salario era de %.1f reais.\n", a, NS);
+		}
+		
+		input.close();
+    }
+}

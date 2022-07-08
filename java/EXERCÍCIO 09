@@ -1,0 +1,75 @@
+
+/*
+                        EXERCÍCIO 09- ESTRUTURAS CONDICIONAIS (DO-WHILE)
+
+Faça um programa que apresente o menu de opções a seguir, permita ao usuário escolher a opção desejada,receba os dados necessários para executar a operação e mostre o resultado. Verifique a possibilidade de opção inválida e não se preocupe com restrições do tipo salário inválido.
+Menu de opções: 1 – Imposto, 2 – Novo Salário, 3 – Classificação, 4 – Finalizar o programa, 5 – Finalizar o programa. Digite a opção desejada. 
+Na opção 1: receber o salário de um funcionário, calcular e mostrar o valor do imposto usando as regras da tabela 3. 
+Na opção 2: receber o salário de um funcionário, calcular e mostrar o valor do novo salário usando as regras da tabela 4. 
+Na opção 3: receber o salário de um funcionário e mostrar sua classificação usando a tabela 5.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+		
+		int opcao;
+		double salario, imposto, novoSalario;
+		String classificacao;
+		
+		do {
+		    System.out.print("Digite o  salário ");
+			salario = input.nextDouble();
+			System.out.print("Digite as opções a seguir: \n1 para Imposto, \n2 para Novo Salário, \n3 para Classificação, \n4 Finalizar Programa, "
+					+ "\n5 opção inválida! Digite o número desejado:");
+			opcao = input.nextInt();
+			
+			if (opcao < 1 || opcao > 4) {
+				System.out.print("\nOpção inválida! digite o número desejado:\n"); }		
+		} while (opcao < 1 || opcao > 4);
+		
+			switch(opcao) {
+		case 1:
+				if (salario < 500) {
+				imposto = salario * 0.05; }
+			else if (salario <= 850) {
+				imposto = salario * 0.10; }
+			else {
+				imposto = salario * 0.15; }
+			System.out.printf(" O valor do imposto sobre o salário R$%.2f é de R$%.2f.", salario, imposto);
+		break;
+		
+		case 2:
+			if (salario > 1500) {
+				novoSalario = salario + 250; }
+			else if (salario >= 750) {
+				novoSalario = salario + 50; }
+			else if (salario >= 450) {
+				novoSalario = salario + 75; }
+			else {
+				novoSalario = salario + 100; }
+			System.out.printf(" O novo salário é de R$%.2f.", novoSalario);
+		break;
+		
+		case 3: 
+		    if (salario < 700) {
+				classificacao = "Mal remunerado!"; }
+			else {
+				classificacao = "Bem remunerado!"; }
+			System.out.printf(" A classificação para o salário R$%.2f é de %s.", salario, classificacao);
+		
+		break;
+		
+		default: 
+			System.out.println(" Finalizar Programa!");
+		}
+		
+		System.out.print("Fim do Prgrama!");
+		
+		input.close();
+
+	}
+}

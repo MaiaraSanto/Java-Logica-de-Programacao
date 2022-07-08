@@ -1,0 +1,43 @@
+
+/*
+                EXERCÍCIO 11 - IF
+        As maçãs custam R$ 0,30 cada se forem compradas menos do que uma dúzia, 
+        e R$ 0,25 se forem compradas pelo menos doze. Escreva um programa que 
+        leia o número de maçãs compradas, calcule e escreva o valor total da compra.
+
+*/
+
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		 
+		int QMacas;
+		double Custo;
+		
+		System.out.print("Quantas ma��s voc� deseja comprar? ");
+		QMacas = input.nextShort();
+		
+		if (QMacas < 12 ) {
+			Custo = QMacas * 0.30;
+		}
+		
+		else {
+			Custo = QMacas * 0.25; 
+		}
+		
+		System.out.print("Custo total de compra para " + QMacas + " maçãs: " + Custo + " reais.\n");
+		
+		
+		System.out.print("**FIM DO PROGRAMA**");
+		
+		
+		input.close();
+
+         
+    }
+
+}

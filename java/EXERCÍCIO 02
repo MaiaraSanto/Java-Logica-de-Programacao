@@ -1,0 +1,34 @@
+
+/*
+                    EXERCÍCIO 02- LAÇO DE REPETIÇÃO (FOR)
+
+Faça um programa para calcular a tabuada de qualquer número digitado pelo usuário.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);   
+		 
+		 int valor;
+		 
+		 
+		 System.out.print("Digite o valor:");   
+		 valor = input.nextInt();   
+		   
+		 
+		for (int i =0; i <10 ; i++ ){
+		
+		     System.out.println(valor +  "x" + i +  "="  + (valor * i)); 
+		    
+		
+		 
+		 input.close();
+		
+		    
+		}
+   
+    }
+}

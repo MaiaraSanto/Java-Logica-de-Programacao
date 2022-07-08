@@ -1,0 +1,44 @@
+
+/*
+EXERCÍCIO 16-IF
+
+Escreva um programa para ler 3 valores inteiros e escrever o maior deles. 
+Considere que o usuário não informará valores iguais.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        	Scanner input = new Scanner(System.in);
+int N1, N2, N3;
+		
+		System.out.print("Digite o primeiro valor: ");
+		N1 = input.nextInt();
+		System.out.print("Digite o segundo valor: ");
+		N2 = input.nextInt();
+		System.out.print("Digite o terceiro valor: ");
+		N3 = input.nextInt();
+		
+		  if (N1 > N2 && N1 > N3) {
+			        System.out.print("O maior número é N1: " + N1+"\n"); 
+		             
+		         }			        
+		                else if (N2 > N1 && N2 > N3) {
+			                System.out.print("O maior número é N2:" + N2+"\n");
+			                }
+			                else if (N3 > N1 && N3 > N2) {
+			                        System.out.print("O maior número é N3: " + N3+"\n"); 
+		                     }	
+		                            else {
+			                            System.out.print(" valor inválido! Não pode digitar números repetidos !:\n ");	
+		                        
+		                            }
+		                            
+			  System.out.print("**FIM DO PROGRAMA** ");           
+		         
+		         input.close();
+		 
+    }
+}
