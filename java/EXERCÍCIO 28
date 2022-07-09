@@ -1,0 +1,45 @@
+
+/*
+            EXERCÍCIO 18 - IF
+            
+            Escreva um programa que leia o valor de 3 ângulos de um triângulo e 
+            escreva se o triângulo é Acutângulo, Retângulo ou Obtusângulo.
+            Sendo que:
+            Triângulo Retângulo: possui um ângulo reto. (igual a 90º)
+            Triângulo Obtusângulo: possui um ângulo obtuso. (maior que90º)
+            TriânguloAcutângulo: possui três ângulos agudos. (menor que 90º
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+		
+		double angulo1, angulo2, angulo3;
+		
+		System.out.println("Digite o primeiro lado do triângulo: ");
+		angulo1 = input.nextDouble();
+		System.out.println("Digite o segundo lado do triângulo: ");
+		angulo2 = input.nextDouble();
+		System.out.println("Digite o terceiro lado do triângulo: ");
+		angulo3 = input.nextDouble();
+		
+		if (angulo1 < 90 && angulo2 < 90 && angulo3 < 90) {
+			System.out.print("Este triângulo é acutângulo!\n");
+		}
+		
+		else if (angulo1 == 90 || angulo2 == 90 || angulo3 == 90) {
+			System.out.print("Este triângulo é retângulo!\n");
+		}
+		
+		else {
+			System.out.print("Este triângulo é obtusângulo!\n");
+		}
+		
+			System.out.print("**FIM DO PROGRAMA**");
+		
+		input.close();
+    }
+}
