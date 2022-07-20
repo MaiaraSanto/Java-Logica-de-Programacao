@@ -1,43 +1,32 @@
 
 /*
-                EXERCÍCIO 11 - IF
-        As maçãs custam R$ 0,30 cada se forem compradas menos do que uma dúzia, 
-        e R$ 0,25 se forem compradas pelo menos doze. Escreva um programa que 
-        leia o número de maçãs compradas, calcule e escreva o valor total da compra.
-
+        EXERCÍCIO 23 - if
+        
+        Desenvolva um programa que dado um número, imprima uma das mensagens: 
+        é múltiplo de 3 ou não é múltiplo de 3
 */
-
 
 import java.util.Scanner;
 
 public class Main
 {
     public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		 
-		int QMacas;
-		double Custo;
+        Scanner input = new Scanner(System.in); 
+
+		int num; 
 		
-		System.out.print("Quantas ma��s voc� deseja comprar? ");
-		QMacas = input.nextShort();
+		System.out.print("Digite o número: ");
+		num = input.nextInt();
 		
-		if (QMacas < 12 ) {
-			Custo = QMacas * 0.30;
+		if (num % 3 == 0) {
+			System.out.print("O número " + num + "  múltiplo de 3.");
 		}
 		
 		else {
-			Custo = QMacas * 0.25; 
+			System.out.print("O número " + num + " não é múltiplo de 3.");
 		}
-		
-		System.out.print("Custo total de compra para " + QMacas + " maçãs: " + Custo + " reais.\n");
-		
-		
-		System.out.print("**FIM DO PROGRAMA**");
-		
 		
 		input.close();
 
-         
     }
-
 }

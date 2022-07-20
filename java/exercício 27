@@ -1,0 +1,41 @@
+
+/*
+        EXERCÍCIO 27 - if
+        
+       Desenvolva um programa que dada a idade de uma pessoa, 
+       determine sua condição de eleitor conforme a tabela abaixo:
+        Idade	Condição
+        Menor que 16 anos	Não pode votar
+        Maior ou igual a 16 e menor que 18 anos ou maior ou igual a 65 anos	Facultativo
+        Entre 18 e 64 anos 
+
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); 
+		
+		int Idade;
+		
+		System.out.print("Digite sua idade: ");
+		Idade = input.nextInt();
+		
+	
+		
+		if (Idade < 16 ) {
+			System.out.printf("Não poderá votar."); }
+		else if (Idade >= 14  && Idade < 18 || Idade >= 65) {
+			System.out.printf(" Voto Facultativo."); }
+		
+		else {
+			System.out.print(" Voto Obrigatório."); }
+		
+		
+		input.close();
+
+
+    }
+}

@@ -1,0 +1,32 @@
+
+/*
+        EXERCÍCIO 24 - if
+        
+        Desenvolva um programa que dado um número, informe se ele é divisível por 3 e por 7.
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); 
+
+	
+    int num;
+
+    System.out.print("Digite um valor qualquer: ");
+     num = input.nextInt();
+    
+
+    
+    if(num % 3 == 0 || num % 7 == 0 )  {
+        System.out.print("Divisivel por 7 e 7.\n");}
+    
+    else{
+        System.out.print("Nao divisivel por  3 e 7.\n");}
+	
+		input.close();
+
+    }
+}

@@ -1,0 +1,58 @@
+
+/*
+        EXERCÍCIO 31 - if
+        
+        Um endocrinologista deseja controlar a saúde de seus pacientes e, para isso, se utiliza do Índice de Massa Corporal (IMC). Sabendo-se que o IMC é calculado através da seguinte fórmula:
+        IMC = peso / altura2
+        Onde: 
+        peso é dado em Kg
+        altura é dada em metros
+        Crie um programa que dados o peso e altura do paciente, exiba sua faixa de risco, baseando-se na seguinte tabela:
+        IMC	Faixa de risco
+        Abaixo de 20	Abaixo do peso
+        A partir de 20 até 25	Normal
+        Acima de 25 até 30	Excesso de peso
+        Acima de 30 até 35	Obesidade
+        Acima de 35	Obesidade mórbida
+        
+        
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); 
+		
+	float peso, altura;
+		
+		System.out.print("Digite o peso: ");
+		peso = input.nextFloat();
+		
+		System.out.print("Digite a altura: ");
+		altura  = input.nextFloat();
+		
+		float imc = peso / (altura * altura);
+		
+		if (imc < 20) {
+			System.out.printf("Para o IMC %.2f, a faixa de risco é de: abaixo do peso.", imc); }
+		
+		else if (imc < 25) {
+			System.out.printf("Para o IMC %.2f, a faixa de risco é de: normal.", imc); }
+		
+		else if (imc < 30) {
+			System.out.printf("Para o IMC %.2f, a faixa de risco é de: excesso de peso.", imc); }
+		
+		else if (imc < 35) {
+			System.out.printf("Para o IMC %.2f, a faixa de risco é de: obesidade.", imc); }
+		
+		else {
+			System.out.printf("Para o IMC %.2f, a faixa de risco é de: obesidade mórbida.", imc);
+		}
+				
+		input.close();
+
+
+    }
+}

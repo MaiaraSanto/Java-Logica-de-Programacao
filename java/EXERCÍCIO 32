@@ -1,0 +1,46 @@
+
+/*
+        EXERCÍCIO 31 - if
+        
+        Um comerciante calcula o valor de venda, tendo em vista a tabela a seguir:
+        Valor da compra	Valor da venda
+        < 10,00	Lucro de 70%
+        >= 10,00 e < 30,00	Lucro de 50%
+        >= 30,00 e < 50,00	Lucro de 40%
+        >= 50,00	Lucro de 30%
+        
+*/
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); 
+		
+	float valorCompra;
+		
+		System.out.print("Digite o valor da compra: ");
+		valorCompra = input.nextFloat();
+		
+		if (valorCompra < 10) {
+			System.out.print("O seu lucro é de 70%, portanto o valor da venda será de: " + (valorCompra + valorCompra * 0.7) + " reais.");
+		}
+		
+		else if (valorCompra < 30) {
+			System.out.print("O seu lucro é de 50%, portanto o valor da venda será de: " + (valorCompra + valorCompra * 0.5) + " reais.");
+		}
+		
+		else if (valorCompra < 50) {
+			System.out.print("O seu lucro é de 40%, portanto o valor da venda será de: " + (valorCompra + valorCompra * 0.4) + " reais.");
+		}
+		
+		else {
+			System.out.print("O seu lucro é de 30%, portanto o valor da venda será de: " + (valorCompra + valorCompra * 0.3) + " reais.");
+		}
+			
+		input.close();
+
+
+    }
+}

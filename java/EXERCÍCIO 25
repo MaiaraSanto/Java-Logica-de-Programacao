@@ -1,44 +1,47 @@
 
 /*
-            EXERCÍCIO 07 - CONJUNTO DE VALORES (WHILE)
-            
-            Faça um programa que leia um conjunto não determinado 
-            de valores e mostre o valor lido, seu quadrado, seu cubo 
-            e sua raiz quadrada. Finalize a entrada de dados com um valor 
-            negativo ou zero.
-*/
+        EXERCÍCIO 25 - if
+        
+        A StackX abriu uma linha de crédito para os alunos. O valor máximo da prestação não poderá ultrapassar 
+        30% do salário bruto. Fazer um programa que permita entrar com o salário bruto, o valor do empréstimo 
+        e o número de parcelas e informar o valor da parcela e se o empréstimo pode ou não ser concedido. Caso 
+        o empréstimo não possa ser concedido, informar ainda o valor máximo da prestação.
 
+*/
 
 import java.util.Scanner;
 
 public class Main
 {
     public static void main(String[] args) {
-        	Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); 
+
+	
+    double salarioBruto, emprestimo, valorParcela;
+		int numParcelas;
 		
-		int N;
-		double Q, C, R;
+		System.out.print("Informe o valor do salário bruto: ");
+		salarioBruto = input.nextDouble();
 		
-		System.out.print("Digite um número : ");
-		N = input.nextInt();
+		System.out.print("Qual seria o empréstimo necessário para você? ");
+		emprestimo = input.nextDouble();
 		
-		Q = Math.pow(N, 2);
-		C = Math.pow(N, 3);
-		R = Math.sqrt(N);
+		System.out.print("Em quantas parcelas você deseja pagar? ");
+		numParcelas = input.nextInt();
 		
-			while (N > 0 && N <= 10) {
-				System.out.println ("O quadrado é" + Q);
-				System.out.println ("O cubo é " + C);
-				System.out.printf ("A raíz quadrada é %.2f \n",  R);
-				N=N +1;}
+		valorParcela = (emprestimo + emprestimo * 0.05) / numParcelas;
 		
-			if (N == 0) {
-				System.out.println("ENTRADA DE DADOS INVÁLIDA");
-			}
-			
-			System.out.print("**FIM DO PROGRAMA**");
-			
+		if (valorParcela <= 0.3 * salarioBruto) {
+			System.out.print("O empréstimo poderá ser concedido, e o valor de cada parcela será de: " + valorParcela + " reais.");
+		}
+		
+		else {
+			System.out.print("O empréstimo não poderá ser concedido, pois o valor max. de sua prestação é de " + 0.3 * salarioBruto + " reais.");
+		}
+		
+		
 		input.close();
+
 
     }
 }

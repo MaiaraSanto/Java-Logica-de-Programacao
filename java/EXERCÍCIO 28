@@ -1,45 +1,43 @@
 
 /*
-            EXERCÍCIO 18 - IF
-            
-            Escreva um programa que leia o valor de 3 ângulos de um triângulo e 
-            escreva se o triângulo é Acutângulo, Retângulo ou Obtusângulo.
-            Sendo que:
-            Triângulo Retângulo: possui um ângulo reto. (igual a 90º)
-            Triângulo Obtusângulo: possui um ângulo obtuso. (maior que90º)
-            TriânguloAcutângulo: possui três ângulos agudos. (menor que 90º
+        EXERCÍCIO 28 - if
+        
+       Desenvolva um programa que dada a data de nascimento de uma pessoa e a data atual, 
+       informe a idade dessa pessoa em anos completos. 
+
 */
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 public class Main
 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); 
 		
-		double angulo1, angulo2, angulo3;
+		String  dia, mes, ano;
 		
-		System.out.println("Digite o primeiro lado do triângulo: ");
-		angulo1 = input.nextDouble();
-		System.out.println("Digite o segundo lado do triângulo: ");
-		angulo2 = input.nextDouble();
-		System.out.println("Digite o terceiro lado do triângulo: ");
-		angulo3 = input.nextDouble();
+		System.out.print("Digite o dia do seu nascimento: ");
+		dia = input.next();
+		System.out.print("Digite o mês do seu nascimento: ");
+		mes = input.next();
+		System.out.print("Digite o ano do seu nascimento: ");
+		ano = input.next();
 		
-		if (angulo1 < 90 && angulo2 < 90 && angulo3 < 90) {
-			System.out.print("Este triângulo é acutângulo!\n");
-		}
+		int d = Integer.parseInt(dia);
+		int m = Integer.parseInt(mes);
+		int a = Integer.parseInt(ano);
 		
-		else if (angulo1 == 90 || angulo2 == 90 || angulo3 == 90) {
-			System.out.print("Este triângulo é retângulo!\n");
-		}
-		
-		else {
-			System.out.print("Este triângulo é obtusângulo!\n");
-		}
-		
-			System.out.print("**FIM DO PROGRAMA**");
-		
+		LocalDate localDateAntigo = LocalDate.of(a, m, d);
+		LocalDate localDateNovo = LocalDate.now();
+
+	    Period periodo = Period.between(localDateAntigo, localDateNovo);
+	    System.out.println("Sua idade é de " + periodo.getYears() + " anos, " + periodo.getMonths()
+	    + " meses e " + periodo.getDays() + " dias.");
+
 		input.close();
+
+
     }
 }
