@@ -1,11 +1,11 @@
-// Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
-// A fórmula de conversão é:  F= (9*C+160) / 5,  sendo F a temperatura em Fahrenheit e C a temperatura em Celsius. 
+// Ler uma temperatura em graus Celsius e apresentÃ¡-la convertida em graus Fahrenheit. 
+// A fÃ³rmula de conversÃ£o Ã©:  F= (9*C+160) / 5,  sendo F a temperatura em Fahrenheit e C a temperatura em Celsius. 
 
 package aula01;
 
 import java.util.Scanner; 
 
-public class Exerc5 {
+public class Exerc55 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
@@ -16,7 +16,7 @@ public class Exerc5 {
 		 
 		 F = (9 * C + 160) / 5;
 
-		 System.out.print("A temperatura convertida para Fahrenheit é: " +F +"ºF");
+		 System.out.print("A temperatura convertida para Fahrenheit Ã©: " +F +"ÂºF");
 		 
 		 input.close();
 	}
