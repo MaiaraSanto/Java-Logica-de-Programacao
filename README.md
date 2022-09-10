@@ -1,3 +1,3 @@
 # Java-Lógica de Programação!
 
-Exercícios feito em Java no curso Backend II da StackX.
+60 exercícios de Linguagem de Programação feitos em JAVA para o Módulo Back End B da StackX
