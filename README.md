@@ -56,10 +56,6 @@ public class Main
 }
 ```
 
-***
-
-```bash
-// Criar um programa que leia pelo teclado um valor inteiro e diga se é par ou ímpar.
 
 
 
