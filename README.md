@@ -5,10 +5,13 @@
 ```bash
 /*
                                         EXERCÍCIO 1- IF
-        Uma empresa decidiu dar uma gratificação de Natal a seus funcionários, 
+        
+	Uma empresa decidiu dar uma gratificação de Natal a seus funcionários, 
         baseada no número de horas extras e no número de horas que o funcionário 
         faltou ao trabalho. O valor do prêmio é obtido pela consulta à tabela que se segue.
 */
+
+package aula10;
 
 import java.util.Scanner;
 
@@ -30,19 +33,33 @@ public class Main
 		
 		if (min < 600) {
 		    gratificacao = 100.00;}
-		else if (min <= 1200) {
-			gratificacao = 200.00;}
-		else if (min <= 1800) {
-			gratificacao = 300.00;}
-		else if (min <= 2400) {
-			gratificacao = 400.00;}
-		else {
-			gratificacao = 500.00;}
+		      
+		       else if (min <= 1200) {
+			  gratificacao = 200.00;}
+		             
+			      else if (min <= 1800) {
+			         gratificacao = 300.00;}
+		                  
+				     else if (min <= 2400) {
+			                gratificacao = 400.00;}
+		                          
+					  else {
+			                     gratificacao = 500.00;}
 			
+	
 	System.out.printf("A Gratificação é %.2f reais.\n", gratificacao); 
+	
 	System.out.print("**FIM DO ALGORITMO");
 		
 		input.close();
     }
 }
 ```
+
+***
+
+```bash
+// Criar um programa que leia pelo teclado um valor inteiro e diga se é par ou ímpar.
+
+
+
